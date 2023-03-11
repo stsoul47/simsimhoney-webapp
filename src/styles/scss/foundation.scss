@@ -1,0 +1,57 @@
+@import './foundation/textStyle.scss';
+@import './foundation/color.scss';
+@import './foundation/font.scss';
+
+// window-size
+$web-width: 1170px;
+$web-padding-top: 200px;
+
+$tablet-width: 704px;
+$tablet-padding-top: 120px;
+
+$mobile-width: 310px;
+
+
+// flex-flow
+$display-flex-column-no: column nowrap;
+$display-flex-row-no: row nowrap;
+$display-flex-column-wrap: column wrap;
+$display-flex-row-wrap: row wrap;
+$display-flex-column-re-no: column-reverse nowrap;
+$display-flex-row-re-no: row-reverse nowrap;
+$display-flex-column-re-wrap: column-reverse wrap;
+$display-flex-row-re-wrap: row-reverse wrap;
+
+@mixin flex ($display, $flex-flow, $align-items, $justify-content) {
+  display: $display;
+  flex-flow: $flex-flow;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin text-style ($color, $size, $weight, $line-height, $align) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  text-align: $align;
+}
+
+@mixin image-style ($width, $height, $background, $background-size) {
+  width: $width;
+  height: $height;
+  background: $background;
+  background-size: $background-size;
+}
+@mixin background-image ($background, $background-size) {
+  background: $background;
+  background-size: $background-size;
+}
+
+@mixin transition($x...){
+  -webkit-transition: $x;
+  -moz-transition: $x;
+  -ms-transition: $x;
+  -o-transition: $x;
+  transition: $x;
+}

@@ -9,8 +9,10 @@
       "@utils/*":["./src/utils/*"],
       "@store/*":["./src/store/*"],
       "@redux/*":["./src/redux/*"],
+      "@config/*": ["./src/config/*"],
       "@shared/*":["./src/shared/*"],
-      "@templates/*":["./src/templates/*"]
+      "@templates/*":["./src/templates/*"],
+      "@styles/*": ["./src/styles/*"]
     }
   }
 }
