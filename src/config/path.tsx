@@ -1,5 +1,5 @@
 import { RouteObject } from "react-router-dom";
-import Intro from "@pages/Intro";
+import { Intro, Login } from "@pages/index";
 
 /**
  * router path 정리 
@@ -11,6 +11,10 @@ const path: RouteObject[] = [
 	{
 		path: "", 
 		element: <Intro />
+	},
+	{
+		path: "login",
+		element: <Login />
 	}
 ];
 

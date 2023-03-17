@@ -1,0 +1,48 @@
+@import '../../scss/foundation.scss';
+.app {
+	&.login {
+		width: 100%;
+		height: 100%;
+		@include flex(flex, $display-flex-column-no, center, flex-start);
+	}
+}
+
+.login{
+	&__back-header {
+		width: 100%;
+		height: 80px;
+		@include flex(flex, $display-flex-row-no, center, flex-start);
+		padding-left: 32px;
+		> svg {
+			cursor: pointer;
+			width: 36px;
+			height: 36px;
+		}
+	}
+	&__wrapper {
+		width: 450px;
+		height: calc(100% - 80px);
+		@include flex(flex, $display-flex-column-no, center, center);
+		&--logo {
+			width: 312px;
+			height: 51px;
+			@include background-image(url(../../../assets/images/row_logo_icon.png) no-repeat 50% 50%, contain);
+		}
+	}
+	&__bottom {
+		@include flex(flex, $display-flex-row-no, center, center);
+		> label {
+			@include flex(flex, $display-flex-row-no, center, center);
+		}
+	}
+}
+.button{
+	&__wrapper {
+		width: 100%;
+		@include flex(flex, $display-flex-column-no, center, center);
+		gap: 8px;
+		> button {
+			width: 100%;
+		}
+	}
+}
