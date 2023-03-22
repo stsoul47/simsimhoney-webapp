@@ -1,0 +1,66 @@
+@import '../../scss/foundation.scss';
+
+.social-login {
+	&__wrapper {
+		cursor: pointer;
+		width: 100%;
+		@include flex(flex, $display-flex-row-no, center, flex-start);
+		padding: 16px 24px 16px 16px;
+		gap: 10px;
+		border-radius: 8px;
+
+		&.google {
+			background-color: $white;
+			border: 1px solid $border-100;
+		}
+
+		&.naver {
+			background-color: $naver;
+		}
+
+		&.kakao {
+			background-color: $kakao;
+		}
+	}
+
+	&__icon {
+		width: 20px;
+		height: 20px;
+
+		&.google {
+			@include background-image(url(../../../assets/Icons/google_login_icon.png) 50% 50% no-repeat, contain);
+		}
+
+		&.naver {
+			@include background-image(url(../../../assets/Icons/naver_login_icon.png) 50% 50% no-repeat, contain);
+		}
+
+		&.kakao {
+			@include background-image(url(../../../assets/Icons/kakao_login_icon.png) 50% 50% no-repeat, contain);
+		}
+	}
+
+	&__title {
+		width: 380px;
+		@include flex(flex, $display-flex-column-no, center, center);
+		padding: 0px 0px 2px;
+
+		&.google {
+			>p {
+				@include nato-h6($font-color: $black-75);
+			}
+		}
+
+		&.naver {
+			>p {
+				@include nato-h6($font-color: $white);
+			}
+		}
+
+		&.kakao {
+			>p {
+				@include nato-h6($font-color: $kakao-font);
+			}
+		}
+	}
+}

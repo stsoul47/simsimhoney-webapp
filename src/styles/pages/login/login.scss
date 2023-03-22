@@ -36,13 +36,17 @@
 		gap: 16px;
 	}
 	&__bottom {
-		@include flex(flex, $display-flex-row-no, center, center);
+		width: 100%;
+		@include flex(flex, $display-flex-row-no, flex-start, flex-start);
 		> label {
 			@include flex(flex, $display-flex-row-no, center, center);
-			white-space: nowrap;
 			> p {
-				white-space: nowrap;
-				text-decoration: underline;
+				@include nato-body3($font-color: $secondary);
+				> span {
+					@include nato-link($font-color: $secondary);
+					cursor: pointer;
+					text-decoration: underline;
+				}
 			}
 		}
 	}
@@ -54,6 +58,23 @@
 		gap: 8px;
 		> button {
 			width: 100%;
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 1170px) {
+
+}
+
+@media screen and (max-width: 760px) {
+	.login {
+		&__wrapper {
+			width: 375px;
+		}
+		& label {
+			@include flex(flex, $display-flex-column-no, flex-start, center);
 		}
 	}
 }

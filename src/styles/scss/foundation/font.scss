@@ -36,6 +36,16 @@ $font-family-natoKR: 'Noto Sans KR';
 	font-feature-settings: 'calt' off;
 }
 
+@mixin nato-h6 ($size:16px, $font-weight: 500, $line-height: 23px, $font-color: #667080, $align: center) {
+  font-family: $font-family-natoKR;
+	font-style: normal;
+  font-weight: $font-weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $font-color;
+  text-align: $align;
+}
+
 @mixin nato-body ($size:16px, $font-weight: 300, $line-height: 22px, $font-color: #667080, $align: center) {
   font-family: $font-family-natoKR;
 	font-style: normal;
@@ -48,7 +58,34 @@ $font-family-natoKR: 'Noto Sans KR';
 	font-feature-settings: 'calt' off;
 }
 
+
+@mixin nato-body3 ($size:14px, $font-weight: 400, $line-height: 20px, $font-color: #667080, $align: center) {
+  font-family: $font-family-natoKR;
+	font-style: normal;
+  font-weight: $font-weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $font-color;
+  text-align: $align;
+  letter-spacing: -0.02em;
+	font-feature-settings: 'calt' off;
+}
+
+
 @mixin nato-label ($size:14px, $font-weight: 400, $line-height: 22px, $font-color: #667080, $align: center) {
+  font-family: $font-family-natoKR;
+	font-style: normal;
+  font-weight: $font-weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $font-color;
+  text-align: $align;
+  letter-spacing: -0.02em;
+	text-decoration-line: underline;
+	font-feature-settings: 'calt' off;
+}
+
+@mixin nato-link ($size:14px, $font-weight: 400, $line-height: 22px, $font-color: #667080, $align: center) {
   font-family: $font-family-natoKR;
 	font-style: normal;
   font-weight: $font-weight;
