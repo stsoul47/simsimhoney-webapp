@@ -12,7 +12,8 @@
       "@config/*": ["./src/config/*"],
       "@shared/*":["./src/shared/*"],
       "@templates/*":["./src/templates/*"],
-      "@styles/*": ["./src/styles/*"]
+      "@styles/*": ["./src/styles/*"],
+      "@interface/*": ["./src/interface/*"]
     }
   }
 }
