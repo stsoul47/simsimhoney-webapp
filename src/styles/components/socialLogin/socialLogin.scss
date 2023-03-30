@@ -46,7 +46,7 @@
 		padding: 0px 0px 2px;
 
 		&.google {
-			>p {
+			> p {
 				@include nato-h6($font-color: $black-75);
 			}
 		}
