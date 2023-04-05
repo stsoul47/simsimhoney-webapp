@@ -1,2 +1,4 @@
 import { SocialProps } from "./socialProps"
-export type { SocialProps }
+import { CheckboxProps } from "./checkboxProps"
+
+export type { SocialProps, CheckboxProps }
