@@ -1,18 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { ModalState, loginModalSetting, RootState } from '@store/index';
+import { ModalState, RootState } from '@store/index';
 import { ReactComponent as ChevronLeft } from '@assets/Icons/chevron-left.svg';
 import { GoogleButton, NaverButton, KakaoButton, LoginModal, LoginCheckbox } from '@components/index';
-import ServiceAgree from './modal/ServiceAgree';
 import '@styles/pages/login/login.scss';
 const Login = () => {
 
 	const modal:ModalState = useSelector((state:RootState) => state.modal);
 	const dispatch = useDispatch();
-
-	const AgreeService = (event:any) => {
-		event.stopPropagation();
-		dispatch(loginModalSetting({content: <ServiceAgree />, open: true}));
-	}
 
 	const _checkboxHandler = (event: any) => {
 		console.log("[checkbox Handler] event", event);

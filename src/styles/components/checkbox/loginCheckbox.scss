@@ -19,9 +19,16 @@
 				display: inline-block;
 				background-color: $white;
 				border: 2px solid $border-100;
+
+				border-radius: 3px;
+			}
+			& + label[class="sm"]::before {
 				width: 20px;
 				height: 20px;
-				border-radius: 3px;
+			}
+			& + label[class="lg"]::before {
+				width: 24px;
+				height: 24px;
 			}
 			&:checked + label::before {
 				background: $secondary;
@@ -43,9 +50,4 @@
 		cursor: pointer;
 		@include nato-link($font-color: $secondary);
 	}
-}
-
-
-input[id="login-checkbox"]:checked + label {
-
 }
