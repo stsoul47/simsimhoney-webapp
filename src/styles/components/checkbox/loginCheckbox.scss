@@ -37,6 +37,17 @@
 				background-position: 50%;
 			}
 		}
+		&.agree {
+			@include flex(flex, $display-flex-row-no, center, flex-start);
+			> input[type="checkbox"] {
+				& + label {
+					@include nato-body($font-weight: 400, $line-height: 26px, $font-color: $secondary);
+				}
+				& + label::before {
+					margin-right: 10px;
+				}
+			}
+		}
 	}
 	&--label {
 		width: 100%;

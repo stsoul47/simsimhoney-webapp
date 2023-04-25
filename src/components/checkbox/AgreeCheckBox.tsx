@@ -6,7 +6,7 @@ import '@styles/components/checkbox/loginCheckbox.scss';
 const AgreeCheckBox = ({name, onClick, checked, label, size="sm"}: CheckboxProps) => {
 	return (
 		<div className="login-checkbox">
-			<div className="login-checkbox__wrapper">
+			<div className="login-checkbox__wrapper agree">
 				<input type="checkbox"
 					id= { name }
 					name = { name }

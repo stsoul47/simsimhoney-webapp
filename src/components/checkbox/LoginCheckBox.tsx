@@ -20,7 +20,8 @@ const LoginCheckbox = ({name, onClick, checked, size="sm"}: CheckboxProps) => {
 				<input type="checkbox"
 					id= { name }
 					name = { name }
-					onClick={(event)=>onClick(event)}
+					onClick={openServiceModal}
+					checked={ false }
 				/>
 				<label htmlFor={ name } className={classNames(size)}></label>
 				<p className="login-checkbox--label">

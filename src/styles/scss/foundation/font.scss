@@ -46,6 +46,16 @@ $font-family-natoKR: 'Noto Sans KR';
   text-align: $align;
 }
 
+@mixin nato-h7 ($size:14px, $font-weight: 500, $line-height: 20px, $font-color: #667080, $align: center) {
+  font-family: $font-family-natoKR;
+	font-style: normal;
+  font-weight: $font-weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $font-color;
+  text-align: $align;
+}
+
 @mixin nato-body ($size:16px, $font-weight: 300, $line-height: 22px, $font-color: #667080, $align: center) {
   font-family: $font-family-natoKR;
 	font-style: normal;
