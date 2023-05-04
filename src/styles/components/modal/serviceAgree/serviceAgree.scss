@@ -56,12 +56,12 @@
 				width: 20px;
 				height: 20px;
 				> path {
-					width: 2px;
+					stroke-width: 2px;
 					stroke: #999FAA;
 				}
 				&.on {
 					> path {
-						width: 2px;
+						stroke-width: 2px;
 						stroke: $secondary;
 					}					
 				}
@@ -86,7 +86,6 @@
 			text-align: start;
 		}
 	}
-
 }
 
 .agree-footer {

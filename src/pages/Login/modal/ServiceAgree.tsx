@@ -1,14 +1,15 @@
+import { useState } from 'react';
+import classNames from 'classnames';
 import { ReactComponent as X } from '@assets/Icons/x.svg';
 import { ReactComponent as Check } from '@assets/Icons/check.svg';
 import { loginModalSetting } from '@store/index';
 import { useDispatch } from 'react-redux';
-import '@styles/components/modal/serviceAgree/serviceAgree.scss';
 import { AgreeCheckBox, NormalButton } from '@components/index';
-import classNames from 'classnames';
+import '@styles/components/modal/serviceAgree/serviceAgree.scss';
 const ServiceAgree = () => {
 
 	const dispatch = useDispatch();
-	const requiredCheck = true;
+	const [requiredCheck, setRequiredCheck] = useState(false);
 
 	/**
 	 * modal close button
@@ -44,7 +45,7 @@ const ServiceAgree = () => {
 						<p className="agree-body--title">개인정보 제3자 제공동의</p>
 						<div className="agree-body--checkbox">
 							<div className='agree-body--checkbox-left'>
-								<Check className={classNames({"on": requiredCheck})}/>
+								<Check className={classNames({"on": requiredCheck})} onClick={() => setRequiredCheck(!requiredCheck)}/>
 								<p>[필수] 필수 제공 항목</p>
 							</div>
 							<p>보기</p>
@@ -89,7 +90,7 @@ const ServiceAgree = () => {
 				</div>
 			</div>
 			<div className="agree-footer">
-				<NormalButton title='취소' onClick={_onCancelHandler} buttonClass='cancel-button'/>
+				<NormalButton title='취소' onClick={closeModal} buttonClass='cancel-button'/>
 				<NormalButton title='동의하고 계속하기' onClick={_onCancelHandler} buttonClass='next-button'/>
 			</div>
 		</>
