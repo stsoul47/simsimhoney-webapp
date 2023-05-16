@@ -1,0 +1,29 @@
+@import '../../scss/foundation.scss';
+.header {
+  width: 100%;
+  height: 80px;
+  padding: 0px 32px;
+  gap: 8px;
+  @include flex(flex, $display-flex-row-no, center, space-between);
+  &--button {
+    &__back {
+      cursor: pointer;
+      @include flex(flex, $display-flex-row-no, center, center);
+      > svg {
+        width: 36px;
+        height: 36px;
+        > path {
+          width: 9px;
+          height: 18px;
+        }
+      }
+    }
+    &__login {
+      cursor: pointer;
+      @include flex(flex, $display-flex-row-no, center, center);
+      @include image-style(85px, 30px, $secondary, auto);
+      @include nato-h6($font-color: $white);
+      border-radius: 8px;
+    }
+  }
+}
