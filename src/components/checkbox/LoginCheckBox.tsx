@@ -14,6 +14,8 @@ const LoginCheckbox = ({name, onClick, checked, size="sm"}: CheckboxProps) => {
 		dispatch(loginModalSetting({content: <ServiceAgree />, open: true}));
 	}
 
+	
+
 	return (
 		<div className="login-checkbox">
 			<div className="login-checkbox__wrapper">

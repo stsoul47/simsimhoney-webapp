@@ -1,5 +1,7 @@
+/** 타입 정의부 */
 const MODAL_SETTING = 'modal/MODAL_SETTING' as const;
 const MODAL_LOGIN_SETTING = 'modal/MODAL_LOGIN_SETTING' as const;
+
 type ModalAction = 
 	| ReturnType<typeof modalSetting>
 	| ReturnType<typeof loginModalSetting>
