@@ -4,19 +4,33 @@
   height: 80px;
   padding: 0px 32px;
   gap: 8px;
+  position: fixed;
+  top: 0;
   @include flex(flex, $display-flex-row-no, center, space-between);
   &--logo {
     width: 184px;
     height: 30px;
     @include background-image(url(../../../assets//images//row_logo_icon.png) no-repeat, contain)
   }
-  &--button{
+  &--button {
+    &__back {
+      cursor: pointer;
+      @include flex(flex, $display-flex-row-no, center, center);
+      > svg {
+        width: 36px;
+        height: 36px;
+        > path {
+          width: 9px;
+          height: 18px;
+        }
+      }
+    }
     &__login {
-      @include flex(flex, row, center, center);
+      cursor: pointer;
+      @include flex(flex, $display-flex-row-no, center, center);
       @include image-style(85px, 30px, $secondary, auto);
       @include nato-h6($font-color: $white);
       border-radius: 8px;
-      cursor: pointer;
     }
   }
 }
