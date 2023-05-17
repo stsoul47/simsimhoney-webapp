@@ -1,0 +1,23 @@
+@import '../../scss/foundation.scss';
+.recommend {
+  &__item {
+    gap: 8px;
+    cursor: pointer;
+    @include flex(flex, $display-flex-row-no, center, center);
+    &--icon {
+      @include flex(flex, $display-flex-row-no, center, center);
+      > svg {
+        width: 18px;
+        height: 18px;
+        > path {
+          width: 13.5px;
+          height: 16.5px;
+          stroke: $secondary;
+        }
+      }
+    }
+    &--title {
+      @include nato-body($font-weight: 350, $font-color: $secondary);
+    }
+  }
+}

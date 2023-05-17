@@ -13,7 +13,7 @@
   }
 }
 
-.search {
+.locationSearch {
   width: 100%;
   gap: 16px;
   @include flex(flex, $display-flex-column-no, center, center);
@@ -68,26 +68,5 @@
     background-color: $background;
     border-radius: 8px;
     @include flex(flex, $display-flex-column-no, flex-start, center);
-  }
-}
-
-.list {
-  gap: 8px;
-  cursor: pointer;
-  @include flex(flex, $display-flex-row-no, center, center);
-  &__icon {
-    @include flex(flex, $display-flex-row-no, center, center);
-    > svg {
-      width: 18px;
-      height: 18px;
-      > path {
-        width: 13.5px;
-        height: 16.5px;
-        stroke: $secondary;
-      }
-    }
-  }
-  &__title {
-    @include nato-body($font-weight: 350, $font-color: $secondary);
   }
 }
