@@ -1,0 +1,24 @@
+@import '../../scss/foundation.scss';
+.nextButton {
+  cursor: pointer;
+  padding: 16px 16px 16px 24px;
+  gap: 10px;
+  border-radius: 8px;
+  @include flex(flex, $display-flex-row-no, center, center);
+  @include image-style(100%, auto, $disabled, auto);
+  &__title {
+    @include nato-h6($font-color: $secondary);
+  }
+  &__icon {
+    @include flex(flex, $display-flex-row-no, center, center);
+    > svg {
+      width: 20px;
+      height: 20px;
+      > path {
+        width: 5px;
+        height: 10px;
+        stroke: $secondary;
+      }
+    }
+  }
+}
